@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .single-graph{
+            position:relative;
+            width: 180px;
+            height: 180px;
+            background-color:#71B699;
+            float:left;
+            margin:7.5px 7.5px;
+        }
+        .single-graph>div{
+            position:absolute;
+            top:0px;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+            width: 0;
+            height: 0;
+        }
+        .graph1>div{
+            top:80px;
+            border:50px solid transparent;
+            border-top:100px solid white;
+        }
+        .graph1>div:nth-child(1){
+            transform-origin: 50px 30px;
+            transform: rotateZ(180deg);
+        }
+        .graph2>div{
+            top:60px;
+            border:90px solid transparent;
+            border-left-width:50px; 
+            border-right:50px solid white
+        }
+        .graph2>div:nth-child(1){
+            right:30px;
+            bottom:30px;
+            transform: rotate(-20deg);
+        }
+        .graph2>div:nth-child(2){
+            
+            transform: rotate(-90deg);
+        }
+        .graph2>div:nth-child(3){
+            left:30px;
+            bottom:30px;
+            transform:rotate(-160deg);
+        }
+        .graph3>div:nth-child(1){
+            bottom:100px;
+            border: 45px solid transparent;
+            border-bottom: 37px solid white;
+        }
+        .graph3>div:nth-child(2){
+            top:50px;
+            width:50px;
+            border:20px solid transparent;
+            border-top: 50px solid white;
+        }
+        .graph4>div{
+            right:120px;
+            height: 60px;
+            border:40px solid transparent;
+            border-right:60px solid white;
+        }
+        .graph4>div:nth-child(1){
+            left:100px;
+            transform:rotate(180deg);
+        }
+        .graph5>div{
+            right:120px;
+            height: 40px;
+            border:30px solid transparent;
+            border-right:30px solid white;
+        }
+        .graph5>div:nth-child(1){
+            left:100px;
+            transform:rotate(180deg);
+        }
+        .graph5>div:nth-child(2){
+            left:60px;
+            border:none;
+            width: 40px;
+            height: 100px;
+            background-color: #fff;
+        }
+        .graph6>div{
+            border-bottom:100px solid white;
+            border-right:100px solid transparent;
+        }
+        .graph7>div{
+            border-bottom:100px solid white;
+            border-left:100px solid transparent;
+        }
+        .graph8>div:nth-child(1){
+            left:100px;
+            border-bottom:35px solid white;
+            border-left:35px solid transparent;
+        }
+        .graph8>div:nth-child(2){
+            top:-10px;
+            left:-22px;
+            border-top: 20px solid white;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px 0px 0px 0px;
+            transform: rotate(57deg);
+        }
+        .graph9>div{
+            width: 80px;
+            border:40px solid transparent;
+            border-bottom: 80px solid white;
+        }
+        .graph10>div{
+            width: 100px;
+            height: 70px;
+            background-color: #fff;
+            transform: skew(20deg);
+        }
+        .graph11>div,.graph12>div,.graph13>div,.graph14>div{
+            border:50px solid transparent;
+        }
+        .graph11>div{
+            border-bottom:100px solid white;
+        }
+        .graph12>div{
+            border-left:100px solid white;
+        }
+        .graph13>div{
+            border-top:100px solid white;
+        }
+        .graph14>div{
+            border-right:100px solid white;
+        }
+        .graph15>div{
+            border-top:100px solid white;
+            border-right:100px solid transparent;
+        }
+        .graph16>div{
+            border-top:100px solid white;
+            border-left:100px solid transparent;
+        }
+        .graph17>div{
+            top:10px;
+            left:10px;
+            right:10px;
+            bottom:10px;
+            width:auto;
+            height: auto;
+            background-color: white;
+        }
+        .graph18>div{
+            top:50px;
+            left:10px;
+            right:10px;
+            bottom:50px;
+            width:auto;
+            height: auto;
+            background-color: white;
+        }
+        .graph19>div{
+            top:10px;
+            left:10px;
+            right:10px;
+            bottom:10px;
+            width:auto;
+            height: auto;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .graph20>div{
+            width: 120px;
+            height: 80px;
+            background-color: #fff;
+            border-radius: 50%/50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="single-graph graph1">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="single-graph graph2" >
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="single-graph graph3">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="single-graph graph4">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="single-graph graph5">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="single-graph graph6">
+        <div></div>
+    </div>
+    <div class="single-graph graph7">
+        <div></div>
+    </div>
+    <div class="single-graph graph8">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="single-graph graph9">
+        <div></div>
+    </div>
+    <div class="single-graph graph10">
+        <div></div>
+    </div>
+    <div class="single-graph graph11">
+        <div></div>
+    </div>
+    <div class="single-graph graph12">
+        <div></div>
+    </div>
+    <div class="single-graph graph13">
+        <div></div>
+    </div>
+    <div class="single-graph graph14">
+        <div></div>
+    </div>
+    <div class="single-graph graph15">
+        <div></div>
+    </div>
+    <div class="single-graph graph16">
+        <div></div>
+    </div>
+    <div class="single-graph graph17">
+        <div></div>
+    </div>
+    <div class="single-graph graph18">
+        <div></div>
+    </div>
+    <div class="single-graph graph19">
+        <div></div>
+    </div>
+    <div class="single-graph graph20">
+        <div></div>
+    </div>
+</body>
+</html>
