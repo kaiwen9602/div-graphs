@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:white;
+            overflow: hidden;
+        }
+        /* 放置到屏幕正中间 */
+        .big-box{
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+            width: 500px;
+            height: 500px;
+            animation: spin 4s infinite reverse linear;
+        }
+        /* 4个主盒子的宽高和位置, 通过旋转得到8边行 */
+        .big-box>.box{
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+            width:174px;
+            height: 400px;
+            border-top: 11px solid black;
+            border-bottom: 11px solid black;
+        }
+        .box2{
+            transform: rotate(45deg);
+        }
+        .box3{
+            transform: rotate(90deg);
+        }
+        .box4{
+            transform: rotate(135deg);
+        }
+        .big-box>.box>div{
+            position:absolute;
+            width: 174px;
+            height: 28px;
+        }
+        /* 通过border-bottom 画出 梯形样式
+           通过伪类选择器 设置不同梯形宽度 */
+        .big-box>.box>div>div{
+            position: absolute;
+            left:0;
+            right: 0;
+            margin: 3px auto;
+            border: 8px solid transparent;
+            border-bottom-color:black;
+            width:33px;
+        }
+        .big-box>.box>div>div:nth-child(2){
+            width:52px;
+            top:11px;
+        }
+        .big-box>.box>div>div:nth-child(3){
+            width:68px;
+            top:22px;
+        }
+        /* 上面的旋转180° 下面的设置bottom移动下去 */
+        .big-box>.box>div:nth-child(1){
+            top:22px;
+            transform: rotate(180deg);
+        }
+        .big-box>.box>div:nth-child(2){
+            bottom:22px;
+        }
+        /* 通过白块 画出不同间断的横线 */
+        .white-place-hold{
+            position:absolute;
+            left:0;
+            right:0;
+            margin:0 auto;
+            width: 6px;
+            height: 8px;
+            background-color: white;
+        }
+        /* 中间部分太极图 */
+        .middle-part{
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border:5px solid black;
+            background-image: 
+            radial-gradient(circle 100px at left 50% top 25%, black 20%, white 20% 50%, transparent 50%),
+            radial-gradient(circle 100px at left 50% top 75%, white 20%, black 20% 50%, transparent 50%),
+            linear-gradient(to right,white 50%, black 50%)
+            ;
+            animation:spin 2s linear infinite
+        }
+        @keyframes spin {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="big-box">
+        <div class="box1 box">
+            <div >
+                <div>
+                     <div class="white-place-hold"></div>
+                </div>
+                <div></div>
+                <div></div>
+            </div>
+            <div >
+                <div>
+                    <div class="white-place-hold"></div>
+                </div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div >
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div >
+                <div></div>
+                <div>
+                    <div class="white-place-hold"></div>
+                </div>
+                <div>
+                    <div class="white-place-hold"></div>
+                </div>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div >
+                <div></div>
+                <div>
+                    <div class="white-place-hold"></div>
+                </div>
+                <div></div>
+            </div>
+            <div >
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div >
+                <div></div>
+                <div>
+                    <div class="white-place-hold"></div>
+                </div>
+                <div>
+                    <div class="white-place-hold"></div>
+                </div>
+            </div>
+            <div >
+                <div>
+                    <div class="white-place-hold"></div>
+                </div>
+                <div>
+                    <div class="white-place-hold"></div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+        <div class="middle-part"></div>
+    </div>
+</body>
+</html>
